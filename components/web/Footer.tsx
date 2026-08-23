@@ -24,7 +24,10 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-[#111116] text-white">
-      <div className="mx-auto w-full max-w-[1640px] px-4 py-12 sm:px-8 sm:py-16 lg:px-[7.2vw]">
+      <div
+        data-reveal
+        className="mx-auto w-full max-w-[1640px] px-4 py-12 sm:px-8 sm:py-16 lg:px-[7.2vw]"
+      >
         <div className="grid gap-10 md:grid-cols-[1.2fr_2.8fr] lg:gap-16">
           <div>
             <a

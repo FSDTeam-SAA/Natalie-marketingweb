@@ -2,6 +2,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[560px] overflow-hidden bg-[#060508] text-white sm:min-h-screen">
       <div
+        data-hero-bg
         className="absolute inset-0 translate-x-[1%] scale-105 bg-cover bg-[67%_top] bg-no-repeat sm:translate-x-[8%] sm:scale-110 sm:bg-auto sm:bg-left-top sm:bg-repeat"
         style={{ backgroundImage: "url('/images/elysia-hero.png')" }}
       />
@@ -10,7 +11,10 @@ export default function Hero() {
       {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,4,7,0.08)_0%,rgba(5,4,7,0.3)_34%,rgba(5,4,7,0.72)_58%,#050407_86%),linear-gradient(90deg,#050407_0%,rgba(5,4,7,0.72)_48%,rgba(5,4,7,0.26)_100%)] sm:hidden" /> */}
 
       <div className="relative z-10 mx-auto flex min-h-[560px] w-full max-w-[1640px] items-center px-4 pb-8 pt-24 sm:min-h-screen sm:items-center sm:px-8 sm:pb-12 sm:pt-28 lg:px-[7.2vw]">
-        <div className="w-full rounded-2xl bg-black/10 pb-2 backdrop-blur-[1px] sm:rounded-none sm:bg-transparent sm:pb-0 sm:backdrop-blur-0">
+        <div
+          data-hero-content
+          className="w-full rounded-2xl bg-black/10 pb-2 backdrop-blur-[1px] sm:rounded-none sm:bg-transparent sm:pb-0 sm:backdrop-blur-0"
+        >
           <p className="font-inter mb-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#C2384F] sm:mb-5 sm:text-sm">
             Meet Elysia
           </p>

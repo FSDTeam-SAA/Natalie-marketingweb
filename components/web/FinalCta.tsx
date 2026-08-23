@@ -1,7 +1,10 @@
 export default function FinalCta() {
   return (
     <section className="bg-[#08080b] text-white">
-      <div className="mx-auto grid min-h-[360px] w-full max-w-[1640px] px-4 sm:px-8 lg:grid-cols-2 lg:px-[7.2vw]">
+      <div
+        data-reveal
+        className="mx-auto grid min-h-[360px] w-full max-w-[1640px] px-4 sm:px-8 lg:grid-cols-2 lg:px-[7.2vw]"
+      >
         <div
           className="min-h-[260px] bg-cover bg-[62%_center] sm:min-h-[340px] lg:min-h-[420px]"
           style={{ backgroundImage: "url('/images/elysia-hero.png')" }}

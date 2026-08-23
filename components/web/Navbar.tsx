@@ -4,7 +4,10 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <header className="absolute left-0 top-0 z-20 w-full">
-      <nav className="mx-auto flex w-full max-w-[1640px] items-center justify-between gap-4 px-4 py-5 sm:px-8 lg:px-[7.2vw] lg:py-8">
+      <nav
+        data-nav
+        className="mx-auto flex w-full max-w-[1640px] items-center justify-between gap-4 px-4 py-5 sm:px-8 lg:px-[7.2vw] lg:py-8"
+      >
         <Link
           href="/"
           className="font-playfair shrink-0 text-2xl font-semibold italic text-white sm:text-[28px]"

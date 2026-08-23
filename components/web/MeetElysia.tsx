@@ -25,7 +25,7 @@ export default function MeetElysia() {
   return (
     <section className="bg-[#0f0f13] text-white">
       <div className="mx-auto w-full max-w-[1640px] px-4 py-14 sm:px-8 sm:py-20 lg:px-[7.2vw]">
-        <div className="mx-auto max-w-[680px] text-center">
+        <div data-reveal className="mx-auto max-w-[680px] text-center">
           <h2 className="text-[38px] font-normal leading-tight sm:text-[48px]">
             Meet Elysia.
           </h2>
@@ -39,7 +39,7 @@ export default function MeetElysia() {
 
       <div className="bg-[#08080b]">
         <div className="mx-auto w-full max-w-[1640px] px-4 py-14 sm:px-8 sm:py-20 lg:px-[7.2vw]">
-          <div className="mx-auto max-w-[1640px] text-center">
+          <div data-reveal className="mx-auto max-w-[1640px] text-center">
             <h2 className="text-[34px] font-normal leading-tight sm:text-[44px]">
               Designed for{" "}
               <span className="italic text-[#C2384F]">Connection.</span>
@@ -50,12 +50,16 @@ export default function MeetElysia() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-10  pb-12 sm:mt-14 sm:grid-cols-3 sm:gap-8 lg:gap-16">
+          <div
+            data-stagger
+            className="mt-12 grid gap-10  pb-12 sm:mt-14 sm:grid-cols-3 sm:gap-8 lg:gap-16"
+          >
             {features.map((feature) => {
               const Icon = feature.icon;
 
               return (
                 <article
+                  data-card
                   key={feature.number}
                   className="flex flex-col items-center text-center"
                 >

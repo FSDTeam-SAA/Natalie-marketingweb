@@ -35,7 +35,7 @@ export default function MeetCompanions() {
   return (
     <section className="bg-[#111115] text-white">
       <div className="mx-auto w-full max-w-[1640px] px-4 py-16 sm:px-8 sm:py-20 lg:px-[7.2vw] lg:py-24">
-        <div className="mx-auto max-w-[1640px] text-center">
+        <div data-reveal className="mx-auto max-w-[1640px] text-center">
           <h2 className="text-[34px] font-semibold leading-tight sm:text-[44px]">
             Meet Your{" "}
             <span className="italic text-[#C2384F]">Companions</span>
@@ -46,9 +46,13 @@ export default function MeetCompanions() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 min-[520px]:grid-cols-2 md:grid-cols-3 lg:gap-5 xl:grid-cols-5">
+        <div
+          data-stagger
+          className="mt-10 grid gap-4 min-[520px]:grid-cols-2 md:grid-cols-3 lg:gap-5 xl:grid-cols-5"
+        >
           {companions.map((companion) => (
             <article
+              data-card
               key={companion.name}
               className="group overflow-hidden rounded-lg bg-[#08080b]"
             >

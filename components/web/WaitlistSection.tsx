@@ -4,10 +4,13 @@ export default function WaitlistSection() {
   return (
     <section id="waitlist" className="bg-[#08080b] text-white">
       <div className="mx-auto w-full max-w-[1640px] px-4 py-16 sm:px-8 sm:py-20 lg:px-[7.2vw]">
-        <div className="overflow-hidden rounded-3xl border border-[#ff2f70]/35 bg-[radial-gradient(circle_at_80%_0%,rgba(255,47,112,0.26),transparent_42%),linear-gradient(135deg,#17080f_0%,#340915_48%,#5b1025_100%)] p-6 shadow-[0_24px_90px_rgba(0,0,0,0.38)] sm:p-10 lg:p-14">
+        <div
+          data-reveal
+          className="overflow-hidden rounded-3xl border border-[#ff2f70]/35 bg-[radial-gradient(circle_at_80%_0%,rgba(255,47,112,0.26),transparent_42%),linear-gradient(135deg,#17080f_0%,#340915_48%,#5b1025_100%)] p-6 shadow-[0_24px_90px_rgba(0,0,0,0.38)] sm:p-10 lg:p-14"
+        >
           <div className="grid gap-8 md:grid-cols-[1fr_1px_1fr] md:items-center md:gap-10">
             <div className="max-w-[520px]">
-              <h2 className="text-[34px] font-medium leading-tight sm:text-[44px]">
+              <h2 className="text-[34px] font-normal  sm:text-[44px]">
                 Be First to Meet{" "}
                 <span className="italic text-[#C2384F]">Elysia.</span>
               </h2>
@@ -53,7 +56,10 @@ export default function WaitlistSection() {
           </div>
         </div>
 
-        <div className="mt-4 overflow-hidden rounded-3xl border border-[#ff2f70]/35 bg-[radial-gradient(circle_at_82%_0%,rgba(255,47,112,0.22),transparent_44%),linear-gradient(135deg,#16080e_0%,#310914_48%,#571023_100%)] p-6 shadow-[0_24px_90px_rgba(0,0,0,0.32)] sm:p-10 lg:p-12">
+        <div
+          data-reveal
+          className="mt-4 overflow-hidden rounded-3xl border border-[#ff2f70]/35 bg-[radial-gradient(circle_at_82%_0%,rgba(255,47,112,0.22),transparent_44%),linear-gradient(135deg,#16080e_0%,#310914_48%,#571023_100%)] p-6 shadow-[0_24px_90px_rgba(0,0,0,0.32)] sm:p-10 lg:p-12"
+        >
           <div className="grid gap-8 md:grid-cols-[1fr_1px_1fr] md:items-center md:gap-10">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <div className="flex size-20 shrink-0 items-center justify-center rounded-full border-2 border-[#C2384F] text-[#C2384F] sm:size-24">
@@ -61,7 +67,7 @@ export default function WaitlistSection() {
               </div>
 
               <div>
-                <h2 className="text-[32px] font-medium leading-tight sm:text-[42px]">
+                <h2 className="text-[32px] font-normal leading-tight sm:text-[42px]">
                   You&apos;re on the list.
                 </h2>
                 <p className="font-inter mt-4 max-w-[390px] text-sm leading-7 text-white/62">

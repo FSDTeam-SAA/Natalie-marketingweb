@@ -4,11 +4,13 @@ import Hero from "@/components/web/Hero";
 import MeetCompanions from "@/components/web/MeetCompanions";
 import MeetElysia from "@/components/web/MeetElysia";
 import Navbar from "@/components/web/Navbar";
+import SiteAnimations from "@/components/web/SiteAnimations";
 import WaitlistSection from "@/components/web/WaitlistSection";
 
 const Page = () => {
   return (
     <main className="min-h-screen bg-[#050407]">
+      <SiteAnimations />
       <Navbar />
       <Hero />
       <MeetElysia />
