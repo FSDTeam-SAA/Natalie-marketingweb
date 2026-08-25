@@ -1,4 +1,47 @@
+"use client";
+
+import { useState } from "react";
+import type { FormEvent } from "react";
+import { toast } from "sonner";
+
+const newsletterUrl = `${process.env.NEXT_PUBLIC_URL ?? ""}/newsletter`;
+
 export default function Hero() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!email.trim()) {
+      toast.error("Please enter your email address.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(newsletterUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Newsletter request failed");
+      }
+
+      toast.success("Thanks for joining the Elysia waitlist.");
+      setEmail("");
+    } catch {
+      toast.error("Could not join the waitlist. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section className="relative min-h-[560px] overflow-hidden bg-[#060508] text-white sm:min-h-screen">
       <div
@@ -25,30 +68,35 @@ export default function Hero() {
             Is <span className="italic text-[#C2384F]">Coming.</span>
           </h1>
 
-          <p className="font-inter mt-3 max-w-[300px] text-[13px] leading-snug text-white sm:mt-7 sm:max-w-[520px] sm:text-[28px]">
-            Private AI Companionship — Designed for Connection.
+          <p className="font-inter mt-3 max-w-[300px] text-[13px] leading-snug text-white sm:mt-7 sm:max-w-[780px] sm:text-[28px]">
+            A private AI girlfriend — designed for connection,<span className="text-[#C2384F]">intimacy</span> and a <span className="text-[#C2384F]">relationship</span> that grows with you.
           </p>
 
-          <p className="font-inter mt-3 max-w-[300px] text-[11px] leading-5 text-white/68 sm:mt-8 sm:max-w-[460px] sm:leading-7 sm:text-base">
-            Meet AI companions who remember you, understand you, and are always
-            there.
+          <p className="font-inter mt-3 max-w-[300px] text-[11px] leading-5 text-white/68 sm:mt-8 sm:max-w-[560px] sm:leading-7 sm:text-base">
+           Meet someone who remembers you, understands you and becomes more than just someone to talk to.
           </p>
 
-          <form className="mt-4 flex w-full max-w-[360px] flex-col gap-2.5 sm:mt-7 sm:max-w-[590px] sm:flex-row sm:gap-3">
+          <form
+            className="mt-4 flex w-full max-w-[360px] flex-col gap-2.5 sm:mt-7 sm:max-w-[590px] sm:flex-row sm:gap-3"
+            onSubmit={handleSubmit}
+          >
             <input
               type="email"
               aria-label="Email address"
               placeholder="Your email address"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
               className="font-inter h-10 lg:w-[600px] rounded-lg border border-[#C2384F]/70 bg-white/[0.1] px-4 text-xs text-white outline-none transition  placeholder:text-white/52 focus:border-[#ff2f70] focus:bg-white/[0.13] sm:h-12 sm:px-5 sm:text-sm sm:bg-white/[0.06] sm:focus:bg-white/[0.08] "
-              
+              required
             />
 
 
             <button
               type="submit"
-              className="font-inter h-10 shrink-0 rounded-lg bg-[#d93668] px-6 text-xs font-semibold text-white shadow-[0_12px_30px_rgba(194,56,79,0.28)] transition hover:bg-[#C2384F] sm:h-12 sm:px-7 sm:text-sm sm:font-medium sm:shadow-none"
+              disabled={isSubmitting}
+              className="font-inter h-10 shrink-0 rounded-lg bg-[#d93668] px-6 text-xs font-semibold text-white shadow-[0_12px_30px_rgba(194,56,79,0.28)] transition hover:bg-[#C2384F] disabled:cursor-not-allowed disabled:opacity-70 sm:h-12 sm:px-7 sm:text-sm sm:font-medium sm:shadow-none"
             >
-              Join the Waitlist
+              {isSubmitting ? "Joining..." : "Join the Waitlist"}
             </button>
           </form>
 

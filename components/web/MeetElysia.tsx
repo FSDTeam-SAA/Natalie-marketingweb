@@ -1,25 +1,36 @@
-import { Clock3, Heart, Infinity } from "lucide-react";
+import Image from "next/image";
+import { Heart, Infinity } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const features = [
+type Feature = {
+  number: string;
+  title: string;
+  description: string;
+  icon?: LucideIcon;
+  iconSrc?: string;
+};
+
+const features: Feature[] = [
   {
     number: "01",
     title: "Remember You",
-    description: "Your conversations become more personal as Elysia gets to know you.",
+    description: "YYour conversations become more personal as Elysia remembers the little things that matter to you",
     icon: Heart,
   },
   {
     number: "02",
     title: "Understand You",
-    description: "Companions designed around your personality, interests, and preferences.",
+    description: "She learns your personality, interests, and preferences — creating a connection that feels uniquely yours.",
     icon: Infinity,
   },
   {
     number: "03",
-    title: "Always There",
-    description: "Meaningful conversations whenever you want someone to talk to.",
-    icon: Clock3,
+    title: "Get Closer",
+    description: "Talk, flirt, open up, and explore a relationship that becomes as personal and intimate as you want it to be.",
+    iconSrc: "/star.png",
   },
 ];
+
 
 export default function MeetElysia() {
   return (
@@ -63,8 +74,24 @@ export default function MeetElysia() {
                   key={feature.number}
                   className="flex flex-col items-center text-center"
                 >
-                  <div className="flex size-16 items-center justify-center rounded-full border border-[#ff2f70] text-[#C2384F] sm:size-[74px]">
-                    <Icon className="size-7" strokeWidth={1.7} />
+                  <div
+                    className={`flex size-16 items-center justify-center sm:size-[54px] ${
+                      feature.iconSrc
+                        ? ""
+                        : "rounded-full border border-[#ff2f70] text-[#C2384F]"
+                    }`}
+                  >
+                    {feature.iconSrc ? (
+                      <Image
+                        src={feature.iconSrc}
+                        alt=""
+                        width={1000}
+                        height={1000}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      Icon && <Icon className="size-5 " strokeWidth={1} />
+                    )}
                   </div>
 
                   <h3 className="font-inter mt-6 text-sm font-medium text-white">

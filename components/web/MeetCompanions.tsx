@@ -18,7 +18,7 @@ const companions = [
     imagePosition: "center",
   },
   {
-    name: "Anastacia",
+    name: "Lina",
     traits: "The Warm & Supportive",
     image: "/images/fdb1e36f1cc03efd26ad7846b94c67a3d7f49d0b.png",
     imagePosition: "center",
