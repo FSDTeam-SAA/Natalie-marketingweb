@@ -1,6 +1,48 @@
+"use client";
+
 import { Camera, Check, Mail, Music2 } from "lucide-react";
+import { useState } from "react";
+import type { FormEvent } from "react";
+import { toast } from "sonner";
+
+const newsletterUrl = `${process.env.NEXT_PUBLIC_URL ?? ""}/newsletter`;
 
 export default function WaitlistSection() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!email.trim()) {
+      toast.error("Please enter your email address.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(newsletterUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Newsletter request failed");
+      }
+
+      toast.success("Thanks for joining the Elysia waitlist.");
+      setEmail("");
+    } catch {
+      toast.error("Could not join the waitlist. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section id="waitlist" className="bg-[#08080b] text-white">
       <div className="mx-auto w-full max-w-[1640px] px-4 py-16 sm:px-8 sm:py-20 lg:px-[7.2vw]">
@@ -22,7 +64,7 @@ export default function WaitlistSection() {
 
             <div className="hidden h-full min-h-[150px] w-px bg-white/10 md:block" />
 
-            <form className="w-full">
+            <form className="w-full" onSubmit={handleSubmit}>
               <label className="sr-only" htmlFor="waitlist-email">
                 Email address
               </label>
@@ -32,14 +74,18 @@ export default function WaitlistSection() {
                   id="waitlist-email"
                   type="email"
                   placeholder="Enter your email address"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
                   className="font-inter h-[52px] w-full rounded-lg border border-white/16 bg-[#111116] px-11 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-[#C2384F]"
+                  required
                 />
               </div>
               <button
                 type="submit"
-                className="font-inter mt-4 h-[52px] w-full rounded-lg bg-[#d23567] px-6 text-sm font-semibold uppercase tracking-[0.02em] text-white transition hover:bg-[#C2384F]"
+                disabled={isSubmitting}
+                className="font-inter mt-4 h-[52px] w-full rounded-lg bg-[#d23567] px-6 text-sm font-semibold uppercase tracking-[0.02em] text-white transition hover:bg-[#C2384F] disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Join the Waitlist
+                {isSubmitting ? "Joining..." : "Join the Waitlist"}
               </button>
               <p className="font-inter mt-5 text-center text-xs text-[#ff5c8f]">
                 No spam. Just updates when Elysia is ready.

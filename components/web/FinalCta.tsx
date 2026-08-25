@@ -15,12 +15,11 @@ export default function FinalCta() {
             <h2 className="text-[42px] font-normal leading-[1.05] sm:text-[58px] lg:text-[60px]">
               One Conversation
               <br />
-              Can Change{" "}
-              <span className="italic text-[#C2384F]">Everything.</span>
+              Can Spark{" "}
+              <span className="italic text-[#C2384F]">Something Real.</span>
             </h2>
             <p className="font-inter mt-7 max-w-[430px] text-sm leading-7 text-white/58 sm:text-base">
-              Elysia is coming soon. Be among the first to experience a new kind
-              of connection.
+            Meet Elysia -bring chemistry,intimacy and connection to your life.
             </p>
             <a
               href="#waitlist"

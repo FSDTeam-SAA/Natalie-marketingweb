@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import NextTopLoader from "nextjs-toploader";
 import SmoothScrollProvider from "@/components/ui/provider/SmoothScrollprovider";
+import { Toaster } from "sonner";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -34,8 +35,8 @@ export default function RootLayout({
     <html lang="en" className={cn(playfairDisplay.variable, inter.variable)}>
       <body className="font-playfair antialiased">
         <NextTopLoader color="#007066" height={3} showSpinner={false} />
-          <SmoothScrollProvider>{children}</SmoothScrollProvider>
-       
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );
