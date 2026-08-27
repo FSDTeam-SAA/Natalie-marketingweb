@@ -47,7 +47,7 @@ export default function Hero() {
       <div
         data-hero-bg
         className="absolute inset-0 translate-x-[1%] scale-105 bg-cover bg-[67%_top] bg-no-repeat sm:translate-x-[8%] sm:scale-110 sm:bg-auto sm:bg-left-top sm:bg-repeat"
-        style={{ backgroundImage: "url('/images/elysia-hero.png')" }}
+        style={{ backgroundImage: "url('/images/BAKGRUND LUNA FRAM.jpeg')" }}
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#050407_0%,rgba(5,4,7,0.94)_10%,rgba(5,4,7,0.62)_18%,rgba(5,4,7,0.22)_50%)]" />
       {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,4,7,0.32)_0%,rgba(5,4,7,0.14)_55%,#050407_100%)]" /> */}

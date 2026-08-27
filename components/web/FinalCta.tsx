@@ -7,7 +7,7 @@ export default function FinalCta() {
       >
         <div
           className="min-h-[260px] bg-cover bg-[62%_center] sm:min-h-[340px] lg:min-h-[420px]"
-          style={{ backgroundImage: "url('/images/elysia-hero.png')" }}
+          style={{ backgroundImage: "url('/images/bakgrund 1.png')" }}
         />
 
         <div className="flex items-center py-14 sm:py-20 lg:pl-16">

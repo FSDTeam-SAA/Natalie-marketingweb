@@ -2,31 +2,31 @@ const companions = [
   {
     name: "Elena",
     traits: "The Social & Magnetic",
-    image: "/images/ca06d10938b5cda1fbe96c55346138ef632070da.png",
-    imagePosition: "center",
-  },
-  {
-    name: "Chloé",
-    traits: "The Fun & Adventurous",
-    image: "/images/232e279bdfd733848b63cc9443e51be6dc251d55.png",
-    imagePosition: "center",
-  },
-  {
-    name: "Thalia",
-    traits: "The Confident & Ambitious",
-    image: "/images/fde3626f915f6d70fb7d01b07380cb904922a5d8.png",
-    imagePosition: "center",
-  },
-  {
-    name: "Lina",
-    traits: "The Warm & Supportive",
-    image: "/images/fdb1e36f1cc03efd26ad7846b94c67a3d7f49d0b.png",
+    image: "/images/c1.png",
     imagePosition: "center",
   },
   {
     name: "Luna",
     traits: "The Mysterious & Romantic",
-    image: "/images/32c144ef77b4dce41f4246bc26adf7780cfd2158.png",
+    image: "/images/c2.png",
+    imagePosition: "center",
+  },
+  {
+    name: "Lina",
+    traits: "The Warm & Supportive",
+    image: "/images/c3.png",
+    imagePosition: "center",
+  },
+  {
+    name: "Chloé",
+    traits: "The Fun & Adventurous",
+    image: "/images/c4.png",
+    imagePosition: "center",
+  },
+  {
+    name: "Thalia",
+    traits: "The Confident & Ambitious",
+    image: "/images/c5.png",
     imagePosition: "center",
   },
 ];
@@ -37,12 +37,11 @@ export default function MeetCompanions() {
       <div className="mx-auto w-full max-w-[1640px] px-4 py-16 sm:px-8 sm:py-20 lg:px-[7.2vw] lg:py-24">
         <div data-reveal className="mx-auto max-w-[1640px] text-center">
           <h2 className="text-[34px] font-semibold leading-tight sm:text-[44px]">
-            Meet Your{" "}
-            <span className="italic text-[#C2384F]">Companions</span>
+            Meet Your <span className="italic text-[#C2384F]">Companions</span>
           </h2>
-          <p className="font-inter mt-3 text-sm leading-7 text-white/55">
-            Five presences. Five distinct ways of moving through the world.
-            Follow the story that calls to you.
+          <p className="font-inter mt-3  leading-7 text-white/55 text-base">
+            Five personalities. Who will bring a little more magic into your
+            world?
           </p>
         </div>
 
@@ -68,7 +67,7 @@ export default function MeetCompanions() {
                 <h3 className="text-2xl leading-none text-white sm:text-[28px]">
                   {companion.name}
                 </h3>
-                <p className="font-inter mt-2 text-[11px] leading-5 text-white/70">
+                <p className="font-inter mt-2 text-[16px] leading-5 text-white/70">
                   {companion.traits}
                 </p>
                 <div
