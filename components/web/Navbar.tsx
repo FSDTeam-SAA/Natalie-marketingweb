@@ -17,13 +17,13 @@ export default function Navbar() {
             alt="Elysia Logo"
             width={1000}
             height={1000}
-            className="w-[120px] h-[48px] "
+            className="h-[42px] w-[105px] sm:h-[48px] sm:w-[120px]"
           />
         </Link>
 
         <Link
           href="#waitlist"
-          className="font-inter rounded-full border border-[#C2384F] px-4 py-2.5 text-center text-[11px] font-medium text-white transition hover:bg-[#ff2f70] sm:px-6 sm:text-base"
+          className="font-inter rounded-full border border-[#C2384F] px-3.5 py-2 text-center text-[10px] font-medium text-white transition hover:bg-[#ff2f70] sm:px-6 sm:py-2.5 sm:text-base"
         >
           Join the Waitlist
         </Link>

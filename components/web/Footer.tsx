@@ -26,22 +26,22 @@ export default function Footer() {
     <footer className="bg-[#111116] text-white">
       <div
         data-reveal
-        className="mx-auto w-full max-w-[1640px] px-4 py-12 sm:px-8 sm:py-16 lg:px-[7.2vw]"
+        className="mx-auto w-full max-w-[1640px] px-4 py-10 sm:px-8 sm:py-16 lg:px-[7.2vw]"
       >
-        <div className="grid gap-10 md:grid-cols-[1.2fr_2.8fr] lg:gap-16">
+        <div className="grid gap-9 md:grid-cols-[1.2fr_2.8fr] lg:gap-16">
           <div>
             <a
               href="/"
-              className="font-playfair text-[34px] font-semibold italic leading-none text-white"
+              className="font-playfair text-[30px] font-semibold italic leading-none text-white sm:text-[34px]"
             >
               Elysia<span className="not-italic text-[#ff3d6f]">♥</span>
             </a>
-            <p className="font-inter mt-6 max-w-[250px] text-sm leading-7 text-white/58">
+            <p className="font-inter mt-4 max-w-[260px] text-[13px] leading-6 text-white/58 sm:mt-6 sm:text-sm sm:leading-7">
               Meaningful connections. Real conversations. Designed for deeper
               moments.
             </p>
 
-            <div className="mt-7 flex gap-3">
+            <div className="mt-5 flex gap-3 sm:mt-7">
               {socials.map((social) => {
                 const Icon = social.icon;
 
@@ -50,7 +50,7 @@ export default function Footer() {
                     key={social.label}
                     href="#"
                     aria-label={social.label}
-                    className="flex size-11 items-center justify-center rounded-full border border-[#C2384F] text-white transition hover:bg-[#C2384F]"
+                    className="flex size-10 items-center justify-center rounded-full border border-[#C2384F] text-white transition hover:bg-[#C2384F] sm:size-11"
                   >
                     <Icon className="size-4" />
                   </a>
@@ -59,13 +59,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid gap-9 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 sm:gap-9">
             {footerLinks.map((group) => (
               <div key={group.title}>
                 <h3 className="font-inter text-sm font-medium text-[#C2384F]">
                   {group.title}
                 </h3>
-                <ul className="font-inter mt-6 space-y-3 text-sm text-white/58">
+                <ul className="font-inter mt-4 space-y-2.5 text-[13px] text-white/58 sm:mt-6 sm:space-y-3 sm:text-sm">
                   {group.links.map((link) => (
                     <li key={link}>
                       <a href="#" className="transition hover:text-[#ff5c8f]">
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/12 pt-8 text-center">
+        <div className="mt-10 border-t border-white/12 pt-6 text-center sm:mt-12 sm:pt-8">
           <p className="font-inter text-xs text-white/45">
             © 2026 Meet Elysia. All rights reserved.
           </p>

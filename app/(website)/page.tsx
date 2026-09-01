@@ -1,3 +1,4 @@
+import { ConversationShowcase } from "@/components/web/ConversationShowcase";
 import FinalCta from "@/components/web/FinalCta";
 import Footer from "@/components/web/Footer";
 import Hero from "@/components/web/Hero";
@@ -13,6 +14,7 @@ const Page = () => {
       <SiteAnimations />
       <Navbar />
       <Hero />
+      <ConversationShowcase />
       <MeetElysia />
       <MeetCompanions />
       <WaitlistSection />

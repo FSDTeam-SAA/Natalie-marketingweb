@@ -34,12 +34,12 @@ const companions = [
 export default function MeetCompanions() {
   return (
     <section className="bg-[#111115] text-white">
-      <div className="mx-auto w-full max-w-[1640px] px-4 py-16 sm:px-8 sm:py-20 lg:px-[7.2vw] lg:py-24">
+      <div className="mx-auto w-full max-w-[1640px] px-4 py-12 sm:px-8 sm:py-20 lg:px-[7.2vw] lg:py-24">
         <div data-reveal className="mx-auto max-w-[1640px] text-center">
-          <h2 className="text-[34px] font-semibold leading-tight sm:text-[44px]">
+          <h2 className="text-[30px] font-semibold leading-[1.08] sm:text-[44px]">
             Meet Your <span className="italic text-[#C2384F]">Companions</span>
           </h2>
-          <p className="font-inter mt-3  leading-7 text-white/55 text-base">
+          <p className="font-inter mx-auto mt-3 max-w-[310px] text-[13px] leading-6 text-white/55 sm:max-w-none sm:text-base sm:leading-7">
             Five personalities. Who will bring a little more magic into your
             world?
           </p>
@@ -47,7 +47,7 @@ export default function MeetCompanions() {
 
         <div
           data-stagger
-          className="mt-10 grid gap-4 min-[520px]:grid-cols-2 md:grid-cols-3 lg:gap-5 xl:grid-cols-5"
+          className="mt-9 grid gap-4 min-[430px]:grid-cols-2 md:grid-cols-3 lg:gap-5 xl:grid-cols-5"
         >
           {companions.map((companion) => (
             <article
@@ -56,7 +56,7 @@ export default function MeetCompanions() {
               className="group overflow-hidden rounded-lg bg-[#08080b]"
             >
               <div
-                className="aspect-[3/4.45] bg-cover bg-no-repeat transition duration-500 group-hover:scale-105"
+                className="aspect-[3/3.8] bg-cover bg-no-repeat transition duration-500 group-hover:scale-105 sm:aspect-[3/4.45]"
                 style={{
                   backgroundImage: `url('${companion.image}')`,
                   backgroundPosition: companion.imagePosition,
@@ -64,10 +64,10 @@ export default function MeetCompanions() {
               />
 
               <div className="p-4 sm:p-5">
-                <h3 className="text-2xl leading-none text-white sm:text-[28px]">
+                <h3 className="text-[22px] leading-none text-white sm:text-[28px]">
                   {companion.name}
                 </h3>
-                <p className="font-inter mt-2 text-[16px] leading-5 text-white/70">
+                <p className="font-inter mt-2 text-[13px] leading-5 text-white/70 sm:text-[16px]">
                   {companion.traits}
                 </p>
                 <div
