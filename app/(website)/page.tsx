@@ -16,9 +16,9 @@ const Page = () => {
       <Navbar />
       <Hero />
       <ConversationShowcase />
-      <MeetElysia />
       <MeetCompanions />
       <DesignedForConnection />
+      <MeetElysia />
       <WaitlistSection />
       <FinalCta />
       <Footer />
