@@ -13,21 +13,24 @@ type Feature = {
 const features: Feature[] = [
   {
     number: "01",
-    title: "Remember You",
-    description: "Your conversations become more personal as Elysia remembers the little things that matter to you.",
-    icon: Heart,
+    title: "The Spark",
+    description:
+      "It starts with a conversation. A little curiosity, a little excitement — and that feeling that makes you want to come back for more.",
+    iconSrc: "/star.png",
   },
   {
     number: "02",
-    title: "Understand You",
-    description: "She learns your personality, interests, and preferences — creating a connection that feels uniquely yours.",
+    title: "The Chemistry",
+    description:
+      "Flirt, attraction and playful moments. The more you talk, the more the chemistry grows and the more natural it starts to feel.",
     icon: Infinity,
   },
   {
     number: "03",
     title: "Get Closer",
-    description: "Talk, flirt, open up, and explore a relationship that becomes as personal and intimate as you want it to be.",
-    iconSrc: "/star.png",
+    description:
+      "Talk, flirt, open up, and explore a relationship that becomes more personal, emotional and intimate — as much as you want it to.",
+    icon: Heart,
   },
 ];
 
