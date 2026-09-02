@@ -40,8 +40,8 @@ export default function MeetCompanions() {
             Meet Your <span className="italic text-[#C2384F]">Companions</span>
           </h2>
           <p className="font-inter mx-auto mt-3 max-w-[310px] text-[13px] leading-6 text-white/55 sm:max-w-none sm:text-base sm:leading-7">
-            Five personalities. Who will bring a little more magic into your
-            world?
+            Explore five distinct personalities, each designed to feel natural,
+            personal, and emotionally present.
           </p>
         </div>
 

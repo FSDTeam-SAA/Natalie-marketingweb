@@ -1,4 +1,5 @@
 import { ConversationShowcase } from "@/components/web/ConversationShowcase";
+import DesignedForConnection from "@/components/web/Designed_for_Connection";
 import FinalCta from "@/components/web/FinalCta";
 import Footer from "@/components/web/Footer";
 import Hero from "@/components/web/Hero";
@@ -17,6 +18,7 @@ const Page = () => {
       <ConversationShowcase />
       <MeetElysia />
       <MeetCompanions />
+      <DesignedForConnection />
       <WaitlistSection />
       <FinalCta />
       <Footer />
